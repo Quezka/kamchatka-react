@@ -1,71 +1,47 @@
 @import "../../style/colours";
 
-.Button {
-	padding: 8px 32px;
+.NavButtonContainer {
+	display: flex;
+	flex-direction: row;
+	gap: 16px;
+	width: fit-content;
+}
+
+.NavButton {
+	border-radius: 50%;
+	border: 1px solid $White;
+	background-color: transparent;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	cursor: pointer;
-	transition: all 0.2s ease-in-out;
-	font-family: lato-regular;
+	transition: 0.2s all ease-in-out;
 
-	&.primary {
-		background-color: transparent;
-		border-radius: 5px;
-
-		&.white {
-			border: 1px solid $White;
-			color: $White;
-			font-size: 14px;
-			line-height: 24px;
-
-			&:hover {
-				border-color: $WhiteHoverDisabled;
-				color: $WhiteHoverDisabled;
-			}
-
-			&:active {
-				border-color: $WhiteActive;
-				color: $WhiteActive;
-			}
-		}
-
-		&.green {
-			border: 1px solid $Primary;
-			color: $Primary;
-			font-size: 16px;
-			line-height: 24px;
-
-			&:hover {
-				border-color: $PrimaryHover;
-				color: $PrimaryHover;
-			}
-
-			&:active {
-				border-color: $PrimaryActive;
-				color: $PrimaryActive;
-			}
-		}
+	&.left > svg {
+		rotate: 180deg;
 	}
 
-	&.secondary {
-		background-color: $Secondary;
-		border-radius: 5px;
-		border: none;
-		color: $White;
-		font-size: 14px;
-		line-height: 24px;
-
-		&.disabled {
-			background-color: $SecondaryHoverDisabled;
-			cursor: none;
-			pointer-events: none;
-			color: $WhiteHoverDisabled;
-		}
-
-		&:hover {
-			background-color: $SecondaryHoverDisabled;
-		}
-
-		&:active {
-			background-color: $SecondaryActive;
-		}
+	&:hover {
+		border: 1px solid $Grey;
 	}
+
+	&:active {
+		border: 1px solid $Secondary;
+	}
+
+	&.disabled {
+		border: 1px solid $Grey;
+		& > svg > g > path {
+			fill: $Grey;
+		}
+
+		cursor: none;
+		pointer-events: none;
+	}
+}
+
+.NavButton > svg {
+	width: 15px;
+	height: 15px;
 }

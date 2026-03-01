@@ -2,3 +2,7 @@
 	font-family: lato-regular;
 	src: url(./assets/typography/Lato/Lato-Regular.ttf);
 }
+
+body {
+	background-color: grey;
+}

@@ -1,21 +1,52 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./NavButton.scss";
-import arrow from "../../assets/icons/arrow-small.svg";
+import Arrow from "../../assets/icons/arrow-small.svg?react";
 
 interface NavButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-	disableDirection?: "left" | "right";
 	onClickLeft?: () => void;
 	onClickRight?: () => void;
 }
 
-const NavButton: React.FC<NavButtonProps> = ({ disableDirection = "left", onClickLeft, onClickRight }) => {
+const NavButton: React.FC<NavButtonProps> = ({ onClickLeft, onClickRight }) => {
+	const [disableDirection, setDisableDirection] = useState("");
+
+	const [counter, setCounter] = useState(1);
+
+	const checkCounter = () => {
+		switch (counter) {
+			case 1:
+				setDisableDirection("left");
+				break;
+			case 5:
+				setDisableDirection("right");
+				break;
+			default:
+				setDisableDirection("");
+				break;
+		}
+	};
+
+	useEffect(() => {
+		checkCounter();
+	});
+
+	const handleClickLeft = () => {
+		setCounter(counter - 1);
+		checkCounter();
+	};
+
+	const handleClickRight = () => {
+		setCounter(counter + 1);
+		checkCounter();
+	};
+
 	return (
-		<div className="NavButton-Container">
-			<button className={`NavButton left ${disableDirection == "left" ? "disabled" : ""}`} onClick={onClickLeft}>
-				<img src={arrow} alt="Small Arrow"></img>
+		<div className="NavButtonContainer">
+			<button className={`NavButton left ${disableDirection == "left" ? "disabled" : ""}`} onClick={handleClickLeft} title="Left">
+				<Arrow />
 			</button>
-			<button className={`NavButton right ${disableDirection == "right" ? "disabled" : ""}`} onClick={onClickRight}>
-				<img src={arrow} alt="Small Arrow"></img>
+			<button className={`NavButton right ${disableDirection == "right" ? "disabled" : ""}`} onClick={handleClickRight} title="Right">
+				<Arrow />
 			</button>
 		</div>
 	);
