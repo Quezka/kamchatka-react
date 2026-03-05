@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./NavLink.scss";
 import BigArrow from "../../assets/icons/arrow-big.svg?react";
 
