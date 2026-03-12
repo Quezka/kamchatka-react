@@ -1,0 +1,20 @@
+@import "../../style/colours";
+
+.paragraph {
+	font-family: lato-regular;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400px;
+
+	&.white {
+		color: $White;
+	}
+
+	&.grey {
+		color: $Grey;
+	}
+
+	&.black {
+		color: $Black;
+	}
+}

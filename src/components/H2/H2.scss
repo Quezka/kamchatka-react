@@ -1,0 +1,22 @@
+@import "../../style/colours";
+
+.h2 {
+	font-family: "Inter-tight", sans-serif;
+	font-weight: 700;
+	line-height: 50px;
+	font-size: 40px;
+}
+
+.h2-day {
+	color: $Secondary;
+}
+
+.h2-text {
+	&.white {
+		color: $White;
+	}
+
+	&.black {
+		color: $Black;
+	}
+}
