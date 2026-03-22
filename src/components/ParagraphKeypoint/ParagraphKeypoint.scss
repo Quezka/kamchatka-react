@@ -1,0 +1,32 @@
+@import "../../style/colours";
+
+.paragraph-keypoint {
+	display: flex;
+	flex-direction: column;
+	max-width: fit-content;
+	color: $Black;
+}
+
+.keypoint-icon {
+	padding-bottom: 8px;
+
+	& > svg {
+		width: 32px;
+		height: 32px;
+	}
+}
+
+.keypoint-title {
+	font-family: "Montserrat", sans-serif;
+	font-size: 14px;
+	line-height: 24px;
+	width: fit-content;
+}
+
+.keypoint-desc {
+	font-family: lato-regular;
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.17px;
+}

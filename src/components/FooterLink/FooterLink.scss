@@ -1,0 +1,30 @@
+@import "../../style/colours";
+
+.footerLink {
+	display: flex;
+	gap: 8px;
+	max-width: fit-content;
+	align-items: center;
+}
+
+.link-icon {
+	max-height: 16px;
+	max-width: 16px;
+}
+
+.link-a {
+	text-decoration: none;
+	color: $White;
+	font-size: 16px;
+	line-height: 24px;
+	font-family: lato-regular;
+	cursor: pointer;
+
+	transition: all 0.2s ease-in-out;
+	&:hover {
+		color: $DarkGrey;
+	}
+	&:active {
+		color: $Secondary;
+	}
+}
