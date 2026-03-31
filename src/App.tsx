@@ -11,6 +11,9 @@ import MailIcon from "./assets/icons/email.svg?react";
 import Card from "./components/Card/Card";
 import BearCardImg from "./assets/images/card-monument-start-of-russia.jpg";
 import MountCardImg from "./assets/images/card-mountain.jpg";
+import WhiteCardAudio from "./assets/images/whitecard-audio.jpg";
+import WhiteCardTourists from "./assets/images/whitecard-tourists.jpg";
+import WhiteCard from "./components/WhiteCard/WhiteCard";
 
 function App() {
 	return (
@@ -50,6 +53,11 @@ function App() {
 				imgPosX={-143}
 				imgPosY={-65}
 			></Card>
+			<WhiteCard
+				imgSrc={WhiteCardTourists}
+				title="Безопасность на маршруте"
+				desc="Наша команда проводит инструктаж, рассказывает как правильно себя вести, как избежать опасных ситуаций."
+			></WhiteCard>
 		</>
 	);
 }

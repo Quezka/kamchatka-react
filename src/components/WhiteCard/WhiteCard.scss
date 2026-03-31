@@ -1,0 +1,31 @@
+@import "../../style/colours";
+
+.whitecard {
+	width: 288px;
+	height: 373px;
+	background-color: $White;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0 6px 12px rgb(0 0 0 / 20%);
+}
+
+.whitecard-content {
+	padding: 32px 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.title {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.desc {
+	font-family: lato-regular, sans-serif;
+	font-size: 14px;
+	line-height: 24px;
+	color: $DarkGrey;
+}
