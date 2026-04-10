@@ -9,11 +9,15 @@ import DifficultyIcon from "./assets/icons/levels.svg?react";
 import FooterLink from "./components/FooterLink/FooterLink";
 import MailIcon from "./assets/icons/email.svg?react";
 import Card from "./components/Card/Card";
+import WhiteCard from "./components/WhiteCard/WhiteCard";
+import InputText from "./components/InputText/InputText";
+import InputPeopleQty from "./components/InputPeopleQty/InputPeopleQty";
+import InputCalendar from "./components/InputCalendar/InputCalendar";
+
 import BearCardImg from "./assets/images/card-monument-start-of-russia.jpg";
 import MountCardImg from "./assets/images/card-mountain.jpg";
 import WhiteCardAudio from "./assets/images/whitecard-audio.jpg";
 import WhiteCardTourists from "./assets/images/whitecard-tourists.jpg";
-import WhiteCard from "./components/WhiteCard/WhiteCard";
 
 function App() {
 	return (
@@ -58,6 +62,13 @@ function App() {
 				title="Безопасность на маршруте"
 				desc="Наша команда проводит инструктаж, рассказывает как правильно себя вести, как избежать опасных ситуаций."
 			></WhiteCard>
+			<InputText placeholder="Имя" title="Имя участника"></InputText>
+			<InputText placeholder="Напишите ваш комментарий здесь" title="Комментарий"></InputText>
+			<InputText placeholder="Ваш e-mail"></InputText>
+			<InputPeopleQty></InputPeopleQty>
+			<div style={{ width: "300px" }}>
+				<InputCalendar></InputCalendar>
+			</div>
 		</>
 	);
 }

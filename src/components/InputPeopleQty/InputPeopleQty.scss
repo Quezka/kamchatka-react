@@ -1,0 +1,63 @@
+@import "../../style/colours";
+
+.input-peopleqty-container {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.input-peopleqty-title {
+	font-family: lato-regular;
+	font-size: 14px;
+	line-height: 24px;
+	color: $Black;
+	margin-bottom: 16px;
+}
+
+.input-peopleqty {
+	background-color: transparent;
+	border: none;
+	font-family: lato-regular;
+	font-size: 20px;
+	line-height: 24px;
+	padding-bottom: 13px;
+	border-bottom: 1px solid $Black;
+	color: $Black;
+
+	&::placeholder {
+		line-height: 24px;
+		font-family: lato-regular;
+		font-size: 20px;
+		color: $Grey;
+	}
+
+	&:focus-visible {
+		outline: none;
+	}
+}
+
+.input-peopleqty-icons {
+	position: absolute;
+	display: flex;
+	gap: 31px;
+	align-items: center;
+	width: fit-content;
+	right: 0;
+	bottom: 18px;
+}
+
+.icon {
+	background-color: transparent;
+	border: none;
+	width: fit-content;
+	height: fit-content;
+	cursor: pointer;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	& > svg {
+		width: 16px;
+		height: 16px;
+	}
+}

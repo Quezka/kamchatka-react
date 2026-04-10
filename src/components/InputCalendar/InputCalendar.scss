@@ -1,0 +1,56 @@
+@import "../../style/colours";
+
+.input-calendar-container {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.input-calendar-title {
+	font-family: lato-regular;
+	font-size: 14px;
+	line-height: 24px;
+	color: $Black;
+	margin-bottom: 16px;
+}
+
+.input-calendar {
+	background-color: transparent;
+	border: none;
+	font-family: lato-regular;
+	font-size: 20px;
+	line-height: 24px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid $Black;
+	color: $Black;
+
+	&::placeholder {
+		line-height: 24px;
+		font-family: lato-regular;
+		font-size: 20px;
+		color: $Grey;
+	}
+
+	&:focus-visible {
+		outline: none;
+	}
+}
+
+.calendar-icon {
+	position: absolute;
+	right: 0;
+	bottom: 7px;
+	background-color: transparent;
+	border: none;
+	width: fit-content;
+	height: fit-content;
+	cursor: pointer;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	& > svg {
+		width: 24px;
+		height: 24px;
+	}
+}
