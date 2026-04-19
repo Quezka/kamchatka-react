@@ -37,6 +37,7 @@
 }
 
 .calendar-icon {
+	z-index: 1000;
 	position: absolute;
 	right: 0;
 	bottom: 7px;
@@ -53,4 +54,33 @@
 		width: 24px;
 		height: 24px;
 	}
+}
+
+.calendar-fullscreen-div {
+	position: absolute;
+	z-index: 999;
+	width: 99vw;
+	height: 99vh;
+}
+
+.calendar-div {
+	position: absolute;
+	max-width: fit-content;
+	max-height: fit-content;
+	z-index: 1000;
+	background-color: $TransparentBlack;
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(3px);
+	border-radius: 8px;
+	top: 75px;
+	right: 0;
+	padding: 10px;
+	color: white;
+	font-family: lato-regular;
+}
+
+.calendar-div > .rdp-root {
+	--rdp-accent-color: #f47648;
+	--rdp-today-color: #f47648;
+	--rdp-range_middle-background-color: #ffffff1c;
 }

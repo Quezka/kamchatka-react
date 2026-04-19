@@ -22,6 +22,10 @@ import WhiteCardTourists from "./assets/images/whitecard-tourists.jpg";
 function App() {
 	return (
 		<>
+			<div style={{ width: "400px" }}>
+				<InputCalendar></InputCalendar>
+			</div>
+
 			<Button buttonStyle="primary" text="Забронировать"></Button>
 			<Button buttonStyle="primary" colourPrimary="white" text="Подписаться"></Button>
 			<Button buttonStyle="secondary" text="Отправить заявку"></Button>
@@ -66,9 +70,6 @@ function App() {
 			<InputText placeholder="Напишите ваш комментарий здесь" title="Комментарий"></InputText>
 			<InputText placeholder="Ваш e-mail"></InputText>
 			<InputPeopleQty></InputPeopleQty>
-			<div style={{ width: "300px" }}>
-				<InputCalendar></InputCalendar>
-			</div>
 		</>
 	);
 }

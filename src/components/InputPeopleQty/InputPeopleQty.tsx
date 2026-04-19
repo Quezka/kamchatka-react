@@ -9,7 +9,7 @@ const InputPeopleQty: React.FC = () => {
 	return (
 		<div className="input-peopleqty-container">
 			<span className="input-peopleqty-title">Количество человек</span>
-			<span className="input-peopleqty">{value}</span>
+			<input type="text" className="input-peopleqty" placeholder="" value={value} disabled />
 			<div className="input-peopleqty-icons">
 				<button
 					className="icon"
