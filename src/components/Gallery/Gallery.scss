@@ -1,0 +1,30 @@
+@import "../../style/colours";
+
+.gallery-container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	width: 1000px;
+	gap: 32px;
+	overflow: hidden;
+	z-index: 5;
+}
+
+.gallery {
+	margin-right: 19px;
+	margin-top: 19px;
+	display: flex;
+	gap: 32px;
+	position: relative;
+	justify-content: flex-end;
+	transition: all 0.5s ease-in-out;
+}
+
+.gallery-card {
+	transition: all 0.5s ease-in-out;
+}
+
+.active-card {
+	scale: 1.135;
+	z-index: 10;
+}

@@ -13,6 +13,7 @@ import WhiteCard from "./components/WhiteCard/WhiteCard";
 import InputText from "./components/InputText/InputText";
 import InputPeopleQty from "./components/InputPeopleQty/InputPeopleQty";
 import InputCalendar from "./components/InputCalendar/InputCalendar";
+import Gallery from "./components/Gallery/Gallery";
 
 import BearCardImg from "./assets/images/card-monument-start-of-russia.jpg";
 import MountCardImg from "./assets/images/card-mountain.jpg";
@@ -20,6 +21,58 @@ import WhiteCardAudio from "./assets/images/whitecard-audio.jpg";
 import WhiteCardTourists from "./assets/images/whitecard-tourists.jpg";
 
 function App() {
+	const cardsArray = [
+		{
+			title: "Памятник “Здесь начинается Россия” 1",
+			desc: "Гости Камчатки по традиции делают фото в начале и в конце путешествий.",
+			imgSrc: BearCardImg,
+			imgPosX: -143,
+			imgPosY: -65,
+		},
+		{
+			title: "Памятник “Здесь начинается Россия” 2",
+			desc: "Гости Камчатки по традиции делают фото в начале и в конце путешествий.",
+			imgSrc: BearCardImg,
+			imgPosX: -143,
+			imgPosY: -65,
+		},
+		{
+			title: "Памятник “Здесь начинается Россия” 3",
+			desc: "Гости Камчатки по традиции делают фото в начале и в конце путешествий.",
+			imgSrc: BearCardImg,
+			imgPosX: -143,
+			imgPosY: -65,
+		},
+		{
+			title: "Памятник “Здесь начинается Россия” 4",
+			desc: "Гости Камчатки по традиции делают фото в начале и в конце путешествий.",
+			imgSrc: BearCardImg,
+			imgPosX: -143,
+			imgPosY: -65,
+		},
+		{
+			title: "Памятник “Здесь начинается Россия” 5",
+			desc: "Гости Камчатки по традиции делают фото в начале и в конце путешествий.",
+			imgSrc: BearCardImg,
+			imgPosX: -143,
+			imgPosY: -65,
+		},
+		{
+			title: "Памятник “Здесь начинается Россия” 6",
+			desc: "Гости Камчатки по традиции делают фото в начале и в конце путешествий.",
+			imgSrc: BearCardImg,
+			imgPosX: -143,
+			imgPosY: -65,
+		},
+		{
+			title: "Памятник “Здесь начинается Россия” 6",
+			desc: "Гости Камчатки по традиции делают фото в начале и в конце путешествий.",
+			imgSrc: BearCardImg,
+			imgPosX: -143,
+			imgPosY: -65,
+		},
+	];
+
 	return (
 		<>
 			<div style={{ width: "400px" }}>
@@ -30,7 +83,6 @@ function App() {
 			<Button buttonStyle="primary" colourPrimary="white" text="Подписаться"></Button>
 			<Button buttonStyle="secondary" text="Отправить заявку"></Button>
 			<Button buttonStyle="secondary" isDisabled text="Получить"></Button>
-			<NavButton></NavButton>
 			<NavLink text="Расписание тура" colourScheme="black" href="https://google.com/"></NavLink>
 
 			<H2 day={1}>Прибытие. Встреча в аэропорту и размещение</H2>
@@ -70,6 +122,7 @@ function App() {
 			<InputText placeholder="Напишите ваш комментарий здесь" title="Комментарий"></InputText>
 			<InputText placeholder="Ваш e-mail"></InputText>
 			<InputPeopleQty></InputPeopleQty>
+			<Gallery cards={cardsArray}></Gallery>
 		</>
 	);
 }

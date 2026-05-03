@@ -1,7 +1,9 @@
 import React from "react";
 import "./Card.scss";
 
-interface CardProps {
+export type CardType = { title: string; desc: string; imgSrc: string; imgPosX: number; imgPosY: number };
+
+interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 	title: string;
 	desc: string;
 	imgSrc: string;

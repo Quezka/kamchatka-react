@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import "./NavButton.scss";
 import Arrow from "../../assets/icons/arrow-small.svg?react";
+import type { CardType } from "../Card/Card";
+
+export type ButtonSide = "left" | "right";
 
 interface NavButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-	onClickLeft?: () => void;
-	onClickRight?: () => void;
+	cards: CardType[];
+	onButtonClick: (side: ButtonSide) => void;
 }
 
-const NavButton: React.FC<NavButtonProps> = ({ onClickLeft, onClickRight }) => {
+const NavButton: React.FC<NavButtonProps> = ({ cards, onButtonClick }) => {
 	const [disableDirection, setDisableDirection] = useState("");
 
 	const [counter, setCounter] = useState(1);
@@ -17,7 +20,7 @@ const NavButton: React.FC<NavButtonProps> = ({ onClickLeft, onClickRight }) => {
 			case 1:
 				setDisableDirection("left");
 				break;
-			case 5:
+			case cards?.length:
 				setDisableDirection("right");
 				break;
 			default:
@@ -33,11 +36,13 @@ const NavButton: React.FC<NavButtonProps> = ({ onClickLeft, onClickRight }) => {
 	const handleClickLeft = () => {
 		setCounter(counter - 1);
 		checkCounter();
+		onButtonClick("left");
 	};
 
 	const handleClickRight = () => {
 		setCounter(counter + 1);
 		checkCounter();
+		onButtonClick("right");
 	};
 
 	return (
