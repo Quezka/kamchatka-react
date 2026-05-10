@@ -14,23 +14,26 @@ import InputText from "./components/InputText/InputText";
 import InputPeopleQty from "./components/InputPeopleQty/InputPeopleQty";
 import InputCalendar from "./components/InputCalendar/InputCalendar";
 import Gallery from "./components/Gallery/Gallery";
+import H1Gallery from "./components/H1Gallery/H1Gallery";
 
 import BearCardImg from "./assets/images/card-monument-start-of-russia.jpg";
 import MountCardImg from "./assets/images/card-mountain.jpg";
+import CardMountainImg from "./assets/images/card-mountain-2.jpg";
+
 import WhiteCardAudio from "./assets/images/whitecard-audio.jpg";
 import WhiteCardTourists from "./assets/images/whitecard-tourists.jpg";
 
 function App() {
 	const cardsArray = [
 		{
-			title: "Памятник “Здесь начинается Россия” 1",
-			desc: "Гости Камчатки по традиции делают фото в начале и в конце путешествий.",
-			imgSrc: BearCardImg,
-			imgPosX: -143,
-			imgPosY: -65,
+			title: "Паратунка",
+			desc: "Какой-то вспомогательный текст, в котором кратко описывается что на картинке.",
+			imgSrc: CardMountainImg,
+			imgPosX: -40,
+			imgPosY: -110,
 		},
 		{
-			title: "Памятник “Здесь начинается Россия” 2",
+			title: "Памятник “Здесь начинается Россия”",
 			desc: "Гости Камчатки по традиции делают фото в начале и в конце путешествий.",
 			imgSrc: BearCardImg,
 			imgPosX: -143,
@@ -39,9 +42,9 @@ function App() {
 		{
 			title: "Памятник “Здесь начинается Россия” 3",
 			desc: "Гости Камчатки по традиции делают фото в начале и в конце путешествий.",
-			imgSrc: BearCardImg,
-			imgPosX: -143,
-			imgPosY: -65,
+			imgSrc: CardMountainImg,
+			imgPosX: -40,
+			imgPosY: -110,
 		},
 		{
 			title: "Памятник “Здесь начинается Россия” 4",
@@ -64,12 +67,25 @@ function App() {
 			imgPosX: -143,
 			imgPosY: -65,
 		},
+	];
+	const H1CardsArray = [
 		{
-			title: "Памятник “Здесь начинается Россия” 6",
-			desc: "Гости Камчатки по традиции делают фото в начале и в конце путешествий.",
+			title: "Какая-то подпись",
+			imgSrc: CardMountainImg,
+			imgPosX: -40,
+			imgPosY: -110,
+		},
+		{
+			title: "Какая-то подпись",
 			imgSrc: BearCardImg,
 			imgPosX: -143,
 			imgPosY: -65,
+		},
+		{
+			title: "Какая-то подпись",
+			imgSrc: CardMountainImg,
+			imgPosX: -40,
+			imgPosY: -110,
 		},
 	];
 
@@ -122,7 +138,8 @@ function App() {
 			<InputText placeholder="Напишите ваш комментарий здесь" title="Комментарий"></InputText>
 			<InputText placeholder="Ваш e-mail"></InputText>
 			<InputPeopleQty></InputPeopleQty>
-			<Gallery cards={cardsArray}></Gallery>
+			<Gallery cards={cardsArray} galleryLength={832} position="left"></Gallery>
+			<H1Gallery cards={H1CardsArray}></H1Gallery>
 		</>
 	);
 }

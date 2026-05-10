@@ -2,15 +2,15 @@ import React, { useCallback, useEffect, useState } from "react";
 import Card from "../Card/Card";
 import type { CardType } from "../Card/Card";
 import NavButton, { type ButtonSide } from "../NavButton/NavButton";
-import "./Gallery.scss";
+import "./FooterGallery.scss";
 
-interface GalleryProps {
+interface FooterGalleryProps {
 	cards: CardType[];
 	galleryLength?: number;
 	position?: "left" | "right";
 }
 
-const Gallery: React.FC<GalleryProps> = ({ cards, galleryLength = 832, position = "left" }) => {
+const FooterGallery: React.FC<FooterGalleryProps> = ({ cards, galleryLength = 832, position = "left" }) => {
 	const [space, setSpace] = useState(0);
 	const [currentId, setCurrentId] = useState(position === "left" ? cards?.length : 1);
 
@@ -59,4 +59,4 @@ const Gallery: React.FC<GalleryProps> = ({ cards, galleryLength = 832, position 
 	);
 };
 
-export default Gallery;
+export default FooterGallery;

@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import "./NavButton.scss";
 import Arrow from "../../assets/icons/arrow-small.svg?react";
 import type { CardType } from "../Card/Card";
+import type { H1CardType } from "../H1Card/H1Card";
 
 export type ButtonSide = "left" | "right";
 
 interface NavButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-	cards: CardType[];
+	cards: CardType[] | H1CardType[];
 	onButtonClick: (side: ButtonSide) => void;
 }
 
