@@ -22,6 +22,12 @@ import CardMountainImg from "./assets/images/card-mountain-2.jpg";
 
 import WhiteCardAudio from "./assets/images/whitecard-audio.jpg";
 import WhiteCardTourists from "./assets/images/whitecard-tourists.jpg";
+import SocialCard from "./components/SocialCard/SocialCard";
+
+import alin_och from "./assets/images/alin_och.png";
+import eugen_eugen from "./assets/images/eugen_eugen.png";
+import dim_os from "./assets/images/dim_os.png";
+import SocialGallery from "./components/SocialGallery/SocialGallery";
 
 function App() {
 	const cardsArray = [
@@ -89,6 +95,39 @@ function App() {
 		},
 	];
 
+	const socialCardsArray = [
+		{
+			title: "Алина Гончарова",
+			handle: "@alin_och",
+			imgSrc: alin_och,
+		},
+		{
+			title: "Евгений Барсуков",
+			handle: "@eugen_eugen",
+			imgSrc: eugen_eugen,
+		},
+		{
+			title: "Дмитрий Осипов",
+			handle: "@dim_os",
+			imgSrc: dim_os,
+		},
+		{
+			title: "Алина Гончарова",
+			handle: "@alin_och",
+			imgSrc: alin_och,
+		},
+		{
+			title: "Евгений Барсуков",
+			handle: "@eugen_eugen",
+			imgSrc: eugen_eugen,
+		},
+		{
+			title: "Дмитрий Осипов",
+			handle: "@dim_os",
+			imgSrc: dim_os,
+		},
+	];
+
 	return (
 		<>
 			<div style={{ width: "400px" }}>
@@ -140,6 +179,10 @@ function App() {
 			<InputPeopleQty></InputPeopleQty>
 			<Gallery cards={cardsArray} galleryLength={832} position="left"></Gallery>
 			<H1Gallery cards={H1CardsArray}></H1Gallery>
+			<SocialCard name="Алина Гончарова" handle="@alin_och" imgSrc={alin_och}></SocialCard>
+			<SocialCard name="Евгений Барсуков" handle="@eugen_eugen" imgSrc={eugen_eugen}></SocialCard>
+			<SocialCard name="Дмитрий Осипов" handle="@dim_os" imgSrc={dim_os}></SocialCard>
+			<SocialGallery cards={socialCardsArray}></SocialGallery>
 		</>
 	);
 }

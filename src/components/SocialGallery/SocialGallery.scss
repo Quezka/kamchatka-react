@@ -1,0 +1,31 @@
+@import "../../style/colours";
+
+.socialgallery-container {
+	display: flex;
+	flex-direction: column;
+	height: fit-content;
+	width: fit-content;
+	align-items: flex-end;
+	gap: 56px;
+	overflow: hidden;
+}
+
+.socialgallery {
+	position: relative;
+	display: flex;
+	height: fit-content;
+	gap: 96px;
+	width: 1249px;
+	transition: all 0.2s ease-in-out;
+}
+
+.socialgallery-card {
+	transition: all 0.2s ease-in-out;
+}
+
+.NavButton {
+	border: 1px solid $Black;
+	& > svg > g > path {
+		fill: $Black;
+	}
+}

@@ -1,0 +1,31 @@
+@import "../../style/colours";
+
+.social-card {
+	display: flex;
+	flex-direction: column;
+	height: fit-content;
+	width: fit-content;
+	gap: 24px;
+}
+
+.socialcard-name {
+	font-family: lato-regular;
+	font-size: 18px;
+	font-weight: 600;
+	color: $Black;
+}
+
+.socialcard-handle {
+	font-family: lato-regular;
+	font-size: 18px;
+	color: $Secondary;
+	transition: all 0.2s ease-in-out;
+
+	&:hover {
+		color: $SecondaryActive;
+	}
+
+	&:active {
+		color: $SecondaryActive;
+	}
+}
